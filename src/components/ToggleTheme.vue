@@ -15,11 +15,11 @@ export default {
   methods: {
     toggleTheme() {
       this.darkTheme = !this.darkTheme
-
       // This is using a script that is added in index.html
       window.__setPreferredTheme(
         this.darkTheme ? 'dark' : 'light'
       )
+      this.$emit('changedTheme',window.__theme)
     }
   },
   mounted() {
