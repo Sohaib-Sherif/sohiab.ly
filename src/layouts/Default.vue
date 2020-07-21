@@ -64,6 +64,9 @@ export default {
 .main {
   margin: 0 auto;
   padding: 1.5vw 15px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 .footer {

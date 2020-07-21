@@ -40,6 +40,7 @@ export default {
     margin-top: calc(var(--space) * -1);
     overflow: hidden;
     border-radius: var(--radius) var(--radius) 0 0;
+    padding: calc(var(--space) - 1.5em) calc(var(--space) - 1.5em) 0 calc(var(--space) - 1.5em);
 
     &:empty {
       display: none;

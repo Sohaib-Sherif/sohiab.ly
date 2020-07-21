@@ -1,5 +1,5 @@
 <template>
-  <Layout :show-logo="false">
+  <Layout :show-logo="true">
     <!-- Author intro -->
     <Author :show-title="true" />
 
@@ -21,7 +21,7 @@ query {
         date (format: "D. MMMM YYYY")
         timeToRead
         description
-        cover_image (width: 770, height: 380, blur: 10)
+        cover_image (width: 600, height: 180, blur: 10)
         path
         tags {
           id
@@ -48,3 +48,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.posts {
+	flex: 3;
+	padding: calc(var(--space) / 2) 0;
+}
+</style>
