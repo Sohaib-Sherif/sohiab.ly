@@ -1,44 +1,47 @@
 <template>
-  <Layout>
+  <PostLayout>
     <div class="post-title">
       <h1 class="post-title__text">
         {{ $page.post.title }}
       </h1>
 
       <PostMeta :post="$page.post" />
+      <PostTags :post="$page.post" />
+
 
     </div>
 
-    <div class="post content-box">
+    <div class="post content-box content-box__post">
       <div class="post__header">
         <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
       </div>
 
       <div class="post__content" v-html="$page.post.content" />
 
-      <div class="post__footer">
+      <!-- <div class="post__footer">
         <PostTags :post="$page.post" />
-      </div>
+      </div> -->
     </div>
 
     <div class="post-comments">
       <!-- Add comment widgets here -->
     </div>
-
-    <Author class="post-author" />
-  </Layout>
+    <!-- <Author class="post-author" /> -->
+  </PostLayout>
 </template>
 
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
+import PostLayout from '~/layouts/PostLayout.vue'
 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags
+    PostTags,
+    PostLayout
   },
   metaInfo () {
     return {
@@ -74,6 +77,13 @@ query Post ($id: ID!) {
 </page-query>
 
 <style lang="scss">
+.content-box__post {
+  //override some content box values here instead of the global file
+	max-width: calc(var(--content-width) + 10em);
+  margin: 0 auto;
+  padding: 0;
+}
+
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
@@ -82,12 +92,14 @@ query Post ($id: ID!) {
 .post {
 
   &__header {
-    width: calc(100% + var(--space) * 2);
-    margin-left: calc(var(--space) * -1);
-    margin-top: calc(var(--space) * -1);
+    // width: calc(100% + var(--space) * 2);
+    // margin-left: calc(var(--space) * -1);
+    // margin-top: calc(var(--space) * -1);
     margin-bottom: calc(var(--space) / 2);
     overflow: hidden;
     border-radius: var(--radius) var(--radius) 0 0;
+
+    
 
     img {
       width: 100%;
@@ -99,6 +111,7 @@ query Post ($id: ID!) {
   }
 
   &__content {
+    padding: 0 calc(var(--space) - 2em);
     h2:first-child {
       margin-top: 0;
     }
@@ -115,6 +128,10 @@ query Post ($id: ID!) {
       max-width: none;
     }
   }
+
+  &__footer {
+      padding: 0  calc(var(--space) - 2em) calc(var(--space) - 2em);
+    }
 }
 
 .post-comments {
