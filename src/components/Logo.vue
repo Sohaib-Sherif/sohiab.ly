@@ -80,8 +80,8 @@ export default {
 }
 .logo {
 	text-decoration: none;
-  color: var(--body-color)!important;
-  font-size: .9em;
+  	color: var(--body-color)!important;
+  	font-size: .9em;
 
 	&__image {
 		vertical-align: middle;
@@ -110,6 +110,7 @@ export default {
 		> p {
 			margin-inline-start: 1em;
 			margin-inline-end: 1em;
+			margin-top: .12em;
 			margin-bottom: 0;// because there was a global setting affecting all p tags
 		}
 	}
