@@ -102,8 +102,8 @@
  */
 @-webkit-keyframes fade-in-left {
     0% {
-      -webkit-transform: translateX(-50px);
-              transform: translateX(-50px);
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
       opacity: 0;
     }
     100% {
@@ -114,8 +114,8 @@
   }
   @keyframes fade-in-left {
     0% {
-      -webkit-transform: translateX(-50px);
-              transform: translateX(-50px);
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
       opacity: 0;
     }
     100% {
