@@ -5,7 +5,7 @@ published: true
 tags:
 - Test
 series: false
-cover_image: "/uploads/untitled.png"
+cover_image: "/v1595279281/samples/landscapes/nature-mountains.jpg"
 canonical_url: true
 description: Test 1... 2 ... 3
 
