@@ -29,4 +29,5 @@ fields:
   name: description
   label: description
 pages:
+- content/posts/another-test-cloudinary.md
 - content/posts/test.md
