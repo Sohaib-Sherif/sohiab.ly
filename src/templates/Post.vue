@@ -13,7 +13,16 @@
 
     <div class="post content-box content-box__post">
       <div class="post__header">
-        <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
+        <!-- <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
+         -->
+         <cld-image
+        cloudName="mrdestiny"
+        :publicId="getPath($page.post.cover_image)"
+        loading="lazy">
+          <cld-transformation width="1000" height="300" fetchFormat="auto" crop="fill" gravity="auto"/>
+          <cld-placeholder>
+          </cld-placeholder>
+        </cld-image>
       </div>
 
       <div class="post__content" v-html="$page.post.content" />
@@ -35,13 +44,18 @@ import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
 import PostLayout from '~/layouts/PostLayout.vue'
+import {CldImage, CldTransformation, CldPlaceholder} from 'cloudinary-vue'
+
 
 export default {
   components: {
     Author,
     PostMeta,
     PostTags,
-    PostLayout
+    PostLayout,
+    CldPlaceholder,
+    CldImage,
+    CldTransformation
   },
   metaInfo () {
     return {
@@ -52,6 +66,13 @@ export default {
           content: this.$page.post.description
         }
       ]
+    }
+  },
+  methods: {
+    getPath(path) {
+      let sections = path.split('/');
+      let lastSection = sections[sections.length - 1]
+      return lastSection;
     }
   }
 }

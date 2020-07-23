@@ -1,7 +1,15 @@
 <template>
   <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
-      <g-image alt="Cover image" v-if="post.cover_image" class="post-card__image" :src="post.cover_image" />
+      <!-- <g-image alt="Cover image" v-if="post.cover_image" class="post-card__image" :src="post.cover_image" /> -->
+      <cld-image
+        cloudName="mrdestiny"
+        :publicId="getPath(post.cover_image)"
+        loading="lazy">
+          <cld-transformation width="1000" height="300" fetchFormat="auto" crop="fill" gravity="auto"/>
+          <cld-placeholder>
+          </cld-placeholder>
+        </cld-image>
     </div>
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
@@ -18,13 +26,24 @@
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
+import {CldImage, CldTransformation, CldPlaceholder} from 'cloudinary-vue'
 
 export default {
   components: {
     PostMeta,
-    PostTags
+    PostTags,
+    CldImage,
+    CldTransformation,
+    CldPlaceholder
   },
   props: ['post'],
+  methods: {
+    getPath(path) {
+      let sections = path.split('/');
+      let lastSection = sections[sections.length - 1]
+      return lastSection;
+    }
+  }
 }
 </script>
 
