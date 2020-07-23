@@ -1,31 +1,45 @@
 <template>
-  <Layout>
+  <PostLayout>
     <h1 class="tag-title text-center space-bottom">
       # {{ $page.tag.title }}
     </h1>
 
     <div class="posts">
-      <PostCard v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node"/>
+      <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
     </div>
-  </Layout>
+  </PostLayout>
 </template>
 
 <page-query>
 query Tag ($id: ID!) {
-  tag (id: $id) {
+  tag:  tag(id: $id) {
     title
-    belongsTo {
-      edges {
-        node {
-          ...on Post {
-            title
-            path
-            date (format: "D. MMMM YYYY")
-            timeToRead
-            description
-            content
-          }
-        }
+    # belongsTo(filter: {}) {
+    #   edges {
+    #     node {
+    #       ...on Post {
+    #         title
+    #         path
+    #         date (format: "D. MMMM YYYY")
+    #         timeToRead
+    #         description
+    #         content
+    #       }
+    #     }
+    #   }
+    # }
+  }
+  # I found out that the above can't be filtered and I fiddled wih this until I got it right myself, the tags are a many relation
+  # https://github.com/gridsome/gridsome/issues/556
+  posts: allPost(filter: { tags: {id: { eq: $id}} , published: { eq: true } }) {
+    edges {
+      node {
+        title
+        path
+        date (format: "D. MMMM YYYY")
+        timeToRead
+        description
+        content
       }
     }
   }
@@ -35,11 +49,13 @@ query Tag ($id: ID!) {
 <script>
 import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'
+import PostLayout from '~/layouts/PostLayout.vue'
 
 export default {
   components: {
     Author,
-    PostCard
+    PostCard,
+    PostLayout
   },
   metaInfo: {
     title: 'Hello, world!'
