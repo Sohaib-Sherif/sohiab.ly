@@ -40,6 +40,7 @@ query Tag ($id: ID!) {
         timeToRead
         description
         content
+        cover_image
       }
     }
   }
