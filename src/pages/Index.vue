@@ -21,7 +21,7 @@ query {
         date (format: "D. MMMM YYYY")
         timeToRead
         description
-        cover_image (width: 600, height: 180, blur: 10)
+        cover_image
         path
         tags {
           id

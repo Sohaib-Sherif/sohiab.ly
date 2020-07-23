@@ -92,7 +92,7 @@ query Post ($id: ID!) {
     }
     description
     content
-    cover_image (width: 600, height: 180, blur: 10)
+    cover_image
   }
 }
 </page-query>
