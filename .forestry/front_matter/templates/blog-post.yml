@@ -30,4 +30,5 @@ fields:
   label: description
 pages:
 - content/posts/another-test-cloudinary.md
+- content/posts/say-hello-to-gridsome.md
 - content/posts/test.md
