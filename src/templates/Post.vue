@@ -44,7 +44,7 @@ import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
 import PostLayout from '~/layouts/PostLayout.vue'
-import {CldImage, CldTransformation, CldPlaceholder} from 'cloudinary-vue'
+// import {CldImage, CldTransformation, CldPlaceholder} from 'cloudinary-vue'
 
 
 export default {
@@ -53,9 +53,9 @@ export default {
     PostMeta,
     PostTags,
     PostLayout,
-    CldPlaceholder,
-    CldImage,
-    CldTransformation
+    // CldPlaceholder,
+    // CldImage,
+    // CldTransformation
   },
   metaInfo () {
     return {

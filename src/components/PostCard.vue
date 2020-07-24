@@ -29,15 +29,15 @@
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
-import {CldImage, CldTransformation, CldPlaceholder} from 'cloudinary-vue'
+// import {CldImage, CldTransformation, CldPlaceholder} from 'cloudinary-vue'
 
 export default {
   components: {
     PostMeta,
     PostTags,
-    CldImage,
-    CldTransformation,
-    CldPlaceholder
+    // CldImage,
+    // CldTransformation,
+    // CldPlaceholder
   },
   props: ['post'],
   methods: {
