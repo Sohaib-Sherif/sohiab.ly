@@ -110,6 +110,9 @@ export default {
   font-size: .8em;
   position: relative;
   top:7.5em;
+  @media screen and (max-width: 650px) {
+			top: 11em;
+		}
 
   &__made-with {
     
