@@ -143,6 +143,9 @@ query Post ($id: ID!) {
   }
 
   &__content {
+    @media screen and (max-width: 650px) {
+			padding: 0 var(--space);
+		}
     padding: 0 calc(var(--space) - 2em);
     h2:first-child {
       margin-top: 0;

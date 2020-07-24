@@ -94,7 +94,7 @@ export default {
 }
 
 .main {
-  margin: 0 auto 5.25em auto;
+  margin: 0 auto;
   padding: 1.5vw 15px 0;
   display: flex;
   flex-direction: column;
@@ -108,6 +108,8 @@ export default {
   padding: calc(var(--space) / 6);
   text-align: center;
   font-size: .8em;
+  position: relative;
+  top:7.5em;
 
   &__made-with {
     
