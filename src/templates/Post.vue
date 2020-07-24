@@ -23,6 +23,14 @@
           <cld-placeholder>
           </cld-placeholder>
         </cld-image> -->
+        <lazy-image
+        width="1000"
+        height="300"
+        :src="getPath($page.post.cover_image)"
+        :src-placeholder="getPath($page.post.cover_image, true)"
+        >
+
+        </lazy-image>
       </div>
 
       <div class="post__content" v-html="$page.post.content" />
@@ -44,8 +52,7 @@ import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
 import PostLayout from '~/layouts/PostLayout.vue'
-// import {CldImage, CldTransformation, CldPlaceholder} from 'cloudinary-vue'
-
+import LazyImage from 'v-lazy-image'
 
 export default {
   components: {
@@ -53,9 +60,7 @@ export default {
     PostMeta,
     PostTags,
     PostLayout,
-    // CldPlaceholder,
-    // CldImage,
-    // CldTransformation
+    LazyImage
   },
   metaInfo () {
     return {
@@ -69,10 +74,17 @@ export default {
     }
   },
   methods: {
-    getPath(path) {
+    getPath(path, placeholder) {
       let sections = path.split('/');
       let lastSection = sections[sections.length - 1]
-      return lastSection;
+      let base_url = ""
+      if(placeholder) {
+        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,w_1000,h_300,ar_10:3,q_1,e_blur:1000/"
+      }
+      else {
+        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,w_1000,h_300,ar_10:3/"
+      }
+      return base_url + lastSection;
     }
   }
 }

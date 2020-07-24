@@ -13,6 +13,12 @@
           <cld-placeholder>
           </cld-placeholder>
         </cld-image> -->
+        <lazy-image
+        width="1000"
+        height="300"
+        :src="getPath(post.cover_image)"
+        :src-placeholder="getPath(post.cover_image, true)"
+        ></lazy-image>
     </div>
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
@@ -29,22 +35,27 @@
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
-// import {CldImage, CldTransformation, CldPlaceholder} from 'cloudinary-vue'
+import LazyImage from 'v-lazy-image'
 
 export default {
   components: {
     PostMeta,
     PostTags,
-    // CldImage,
-    // CldTransformation,
-    // CldPlaceholder
+    LazyImage
   },
   props: ['post'],
   methods: {
-    getPath(path) {
+    getPath(path, placeholder) {
       let sections = path.split('/');
       let lastSection = sections[sections.length - 1]
-      return lastSection;
+       let base_url = ""
+      if(placeholder) {
+        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,w_1000,h_300,ar_10:3,q_1,e_blur:1000/"
+      }
+      else {
+        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,w_1000,h_300,ar_10:3/"
+      }
+      return base_url + lastSection;
     }
   }
 }
