@@ -43,9 +43,6 @@ query {
 <script>
 export default {
 	props: ['theme'],
-	mounted() {
-		this.$refs.wisdom.style.display = "none"
-	},
 	methods: {
 		slideIn() {
 			this.$refs.wisdom.style.display = "inherit"
@@ -77,6 +74,7 @@ export default {
 
 .logo_container {
 	display: flex;
+	align-items: center;
 }
 .logo {
 	text-decoration: none;
@@ -101,6 +99,7 @@ export default {
 	}
 
 	&__wisdom {
+		display: none;
 		background-color: var(--body-color);
 		border: 1px solid;
 		border-radius: 1em;
