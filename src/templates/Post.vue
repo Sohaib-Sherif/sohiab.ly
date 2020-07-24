@@ -15,14 +15,14 @@
       <div class="post__header">
         <!-- <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
          -->
-         <cld-image
+         <!-- <cld-image
         cloudName="mrdestiny"
         :publicId="getPath($page.post.cover_image)"
         loading="lazy">
           <cld-transformation width="1000" height="300" fetchFormat="auto" crop="fill" gravity="auto"/>
           <cld-placeholder>
           </cld-placeholder>
-        </cld-image>
+        </cld-image> -->
       </div>
 
       <div class="post__content" v-html="$page.post.content" />

@@ -2,7 +2,7 @@
   <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
       <!-- <g-image alt="Cover image" v-if="post.cover_image" class="post-card__image" :src="post.cover_image" /> -->
-      <cld-image
+      <!-- <cld-image
         v-if="post.cover_image"
         cloudName="mrdestiny"
         :publicId="getPath(post.cover_image)"
@@ -12,7 +12,7 @@
           <cld-transformation width="1000" height="300" fetchFormat="auto" crop="fill" gravity="auto"/>
           <cld-placeholder>
           </cld-placeholder>
-        </cld-image>
+        </cld-image> -->
     </div>
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
