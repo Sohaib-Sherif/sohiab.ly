@@ -36,6 +36,12 @@ module.exports = {
         publicPath: `/netlify`
       }
     },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-173512383-1'
+      }
+    },
   ],
 
   transformers: {
