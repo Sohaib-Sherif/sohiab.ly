@@ -24,8 +24,6 @@
           </cld-placeholder>
         </cld-image> -->
         <lazy-image
-        width="1000"
-        height="300"
         :src="getPath($page.post.cover_image)"
         :src-placeholder="getPath($page.post.cover_image, true)"
         >
@@ -79,10 +77,10 @@ export default {
       let lastSection = sections[sections.length - 1]
       let base_url = ""
       if(placeholder) {
-        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,w_1000,h_300,ar_10:3,q_1,e_blur:1000/"
+        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,ar_10:4,q_1,e_blur:1000/"
       }
       else {
-        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,w_1000,h_300,ar_10:3/"
+        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,ar_10:4/"
       }
       return base_url + lastSection;
     }
@@ -115,6 +113,7 @@ query Post ($id: ID!) {
 	max-width: calc(var(--content-width) + 10em);
   margin: 0 auto;
   padding: 0;
+  width: 100%;;
 }
 
 .post-title {

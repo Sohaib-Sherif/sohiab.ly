@@ -14,8 +14,7 @@
           </cld-placeholder>
         </cld-image> -->
         <lazy-image
-        width="1000"
-        height="300"
+        class="post-card__lazy"
         :src="getPath(post.cover_image)"
         :src-placeholder="getPath(post.cover_image, true)"
         ></lazy-image>
@@ -50,10 +49,10 @@ export default {
       let lastSection = sections[sections.length - 1]
        let base_url = ""
       if(placeholder) {
-        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,w_1000,h_300,ar_10:3,q_1,e_blur:1000/"
+        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,ar_11:4,q_1,e_blur:1000/"
       }
       else {
-        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,w_1000,h_300,ar_10:3/"
+        base_url = "https://res.cloudinary.com/mrdestiny/image/upload/c_fill,g_auto,f_auto,ar_11:4/"
       }
       return base_url + lastSection;
     }
@@ -67,6 +66,12 @@ export default {
   position: relative;
 
   &__header {
+    //I got this after so many trial and error
+    @media screen and (max-width: 650px) {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+	  }
     margin-left: calc(var(--space) * -1);
     margin-right: calc(var(--space) * -1);
     margin-bottom: calc(var(--space) / 2);
@@ -77,6 +82,12 @@ export default {
 
     &:empty {
       display: none;
+    }
+  }
+
+  &__content {
+    @media screen and (max-width: 650px) {
+      padding: 0 .7em 0.7em;
     }
   }
 
@@ -108,6 +119,10 @@ export default {
     overflow: hidden;
     text-indent: -9999px;
     z-index: 0;
+  }
+
+  &__lazy {
+    width: 100%;
   }
 }
 </style>

@@ -99,6 +99,9 @@ export default {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  @media screen and (max-width: 1299px) {
+    flex-direction: column;
+  }
 }
 
 .footer {
