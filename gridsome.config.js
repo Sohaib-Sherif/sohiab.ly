@@ -9,6 +9,8 @@ module.exports = {
   siteDescription: `A simple & minimalistic blog where I share my knowledge and all the experiences and diffculties
   that I faced as a Software Developer. I also write about life, philosophy and anything in between`,
 
+  icon: './src/favicon-32x32.png',
+
   templates: {
     Post: '/:title',
     Tag: '/tag/:id'
