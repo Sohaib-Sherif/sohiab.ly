@@ -1,15 +1,15 @@
 ---
 date: 2020-07-28T20:37:14.000+02:00
-title: The "why/how I made" of this blog
+title: The "why and how" of the making of this blog
 published: true
 tags:
-- Forestry
-- Cloudinary
+- Pilot
+- Vuejs
 - |2-
 
   Gridsome
-- Vuejs
-- Pilot
+- Forestry
+- Cloudinary
 series: false
 cover_image: "/v1595955924/janko-ferlic-sfL_QOnmy00-unsplash_dgmo36.jpg"
 canonical_url: false
