@@ -1,7 +1,7 @@
 ---
-date: 
+date: 2020-07-28T20:37:14+02:00
 title: The "why/how I made" of this blog
-published: false
+published: true
 tags:
 - Forestry
 - Cloudinary
@@ -26,12 +26,13 @@ description: I explain here why I made this blog for myself and what I intend of
 
 # _Why I made this blog?_
 
+
 I am not the kind of person who usually dwells on social media, I wouldn't say that I hate it as whenever I decide to do a quick round-up I find good information related (or unrelated) to my profession as a developer, but I usually also stumble upon other unwanted stuff and in general, it can be time-consuming. I try to follow certain topics on selected social media apps (mostly Reddit and sometimes twitter).
 
 That still doesn't significantly tell the reason why I made this blog. I made it because the current social media platforms don't serve me well, especially with my lifestyle. I need a quiet space for myself to share my ideas in my own way without much noise and disturbance or limits.
 
 What would you expect from me in this blog are technical posts of stuff I learned in my development journey (this could be considered as one) and other posts about general ideas that I value or things that I want to discuss and explain my view on them and just philosophize about, and any other concept that I may have found interesting or useful. So I hope you find what I share here useful for you, you can always send me an email or contact me on my LinkedIn if you have any questions or suggestions.
 
-okay so now that we got rid of the boring part (right?) let's get to what most of you I assume are interested in.... drum roll, please! 🥁
+okay so now that we got rid of the boring part (right?) let's get to what I assume most of you are interested in.... drum roll, please! 🥁
 
 # _How I made this blog?_
