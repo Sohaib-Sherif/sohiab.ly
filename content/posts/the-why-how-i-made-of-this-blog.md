@@ -22,9 +22,9 @@ unsplash_search_query: https://unsplash.com/s/photos/blog?utm_source=unsplash&am
 ---
 # **Greetings!**
 
-#### My name is [**Sohaib Sherif**](https://sohaib-sherif.github.io/resume/), I guess you either know that already because you are a friend/colleague of mine or that you read the small introduction where my face is haha.
+My name is [**Sohaib Sherif**](https://sohaib-sherif.github.io/resume/), I guess you either know that already because you are a friend/colleague of mine or that you read the small introduction where my face is haha.
 
-#### Well I am not here to write nonsense and I shall start by getting to your answers, I mean I guess you want to know what is this blog? why did I make it? and to any of my fellow developers they will more than surely be eager to know what I used to build it as that might help them decide what tools to use for their own (and boy there are a lot!).
+Well I am not here to write nonsense and I shall start by getting to your answers, I mean I guess you want to know what is this blog? why did I make it? and to any of my fellow developers they will more than surely be eager to know what I used to build it as that might help them decide what tools to use for their own (and boy there are a lot!).
 
 ## _Why I made this blog?_
 
