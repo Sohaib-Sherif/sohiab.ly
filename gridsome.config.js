@@ -51,7 +51,9 @@ module.exports = {
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
+      // anchorClassName: 'icon icon-link',
+      slug: false,
+      autoLinkHeadings: false,
       plugins: [
         '@gridsome/remark-prismjs'
       ]
