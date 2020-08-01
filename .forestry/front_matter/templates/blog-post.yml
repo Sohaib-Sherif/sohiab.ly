@@ -28,6 +28,11 @@ fields:
 - type: textarea
   name: description
   label: description
+- name: blog_meta
+  type: include
+  config: {}
+  template: blog-post-meta
+  label: Blog Meta
 pages:
 - content/posts/another-test-cloudinary.md
 - content/posts/test.md
