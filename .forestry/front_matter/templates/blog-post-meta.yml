@@ -7,8 +7,18 @@ fields:
   config:
     required: false
   label: Cover Photo By
-- name: unsplash_search_query
+- name: cover_photo_link
   type: text
   config:
     required: false
-  label: Unsplash Search Query
+  label: Cover Photo Link
+- name: cover_photo_source
+  type: text
+  config:
+    required: false
+  label: Cover Photo Source
+- name: cover_photo_source_link
+  type: text
+  config:
+    required: false
+  label: Cover Photo Source Link
