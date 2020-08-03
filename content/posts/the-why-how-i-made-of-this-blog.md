@@ -17,7 +17,6 @@ description: I explain here why I made this blog for myself and what I intend of
   with it and I also show to you the building blocks and steps that could guide you
   on making your very own blog too!
 cover_photo_by: "\U0001F1F8\U0001F1EE Janko Ferlič"
-unsplash_search_query: https://unsplash.com/s/photos/blog?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
 cover_photo_link: https://unsplash.com/@itfeelslikefilm?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
 cover_photo_source: Unsplash
 cover_photo_source_link: https://unsplash.com/s/photos/blog?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText

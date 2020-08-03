@@ -29,6 +29,11 @@
         >
 
         </lazy-image>
+        <!-- in case of cover pictures from other sources I should change this -->
+        <p class="post__cover-credit" v-if="$page.post.cover_photo_by">
+          Picture by <a :href="$page.post.cover_photo_link">{{ $page.post.cover_photo_by }}</a> 
+          on <a :href="$page.post.cover_photo_source_link">{{ $page.post.cover_photo_source }}</a>
+          </p>
       </div>
 
       <div class="post__content" v-html="$page.post.content" />
@@ -103,6 +108,10 @@ query Post ($id: ID!) {
     description
     content
     cover_image
+    cover_photo_by
+    cover_photo_link
+    cover_photo_source
+    cover_photo_source_link
   }
 }
 </page-query>
@@ -132,6 +141,7 @@ query Post ($id: ID!) {
     border-radius: var(--radius) var(--radius) 0 0;
 
     
+    
 
     img {
       width: 100%;
@@ -141,6 +151,13 @@ query Post ($id: ID!) {
       display: none;
     }
   }
+
+  &__cover-credit {
+        text-align: center;
+        color: currentColor;
+        font-size: .65em;
+        margin-bottom: 0;
+    }
 
   &__content {
     @media screen and (max-width: 650px) {
