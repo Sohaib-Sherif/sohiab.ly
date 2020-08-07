@@ -41,12 +41,12 @@ okay so now that we got rid of the boring part (right?) let's get to what most o
 
 ## _How I made this blog_ 🧐_?_
 
-The making of a blog (or any other project per say) requires the research and study of all the possible solutions and tools, outweighing the advantages and disadvantages of each approach and solution, and then making a decision that suits the wanted requirements best.
+The making of a blog (or any other project per say) requires the research and study of all the possible solutions and tools, outweighing the advantages and disadvantages of each approach and solution, and then making a decision that suits the desired requirements best.
 
 So first of all we need to know what my requirements were for a blog:
 
 1. The development process must be easy and with little to no learning curve
-2. The deployment and maintainence of the blog must be quite easy that it just works™️.
+2. The deployment and maintainence of the blog must be quite easy that it "just works™️."
 3. The development and deployment cost must be as little as possible, preferebly zero.
 
 Taking all of that in mind we can now start mentioning the solutions that I came up with and understanding the decisions that I have taken.
