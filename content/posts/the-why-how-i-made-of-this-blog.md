@@ -1,6 +1,6 @@
 ---
 date: 2020-07-28T20:37:14.000+02:00
-title: The "why and how" of the making of this blog
+title: "Why I made this blog \U0001F914? and How \U0001F9D0?"
 published: true
 tags:
 - Pilot
@@ -16,10 +16,11 @@ canonical_url: false
 description: I explain here why I made this blog for myself and what I intend of doing
   with it and I also show to you the building blocks and steps that could guide you
   on making your very own blog too!
-cover_photo_by: "\U0001F1F8\U0001F1EE Janko Ferlič"
-cover_photo_link: https://unsplash.com/@itfeelslikefilm?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
-cover_photo_source: Unsplash
-cover_photo_source_link: https://unsplash.com/s/photos/blog?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+cover_photo_by: https://unsplash.com/@itfeelslikefilm?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+unsplash_search_query: https://unsplash.com/s/photos/blog?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+cover_photo_link: ''
+cover_photo_source: ''
+cover_photo_source_link: ''
 
 ---
 # **Greetings!**
@@ -28,7 +29,7 @@ My name is [**Sohaib Sherif**](https://sohaib-sherif.github.io/resume/), I guess
 
 Well I am not here to write nonsense and I shall start by getting to your answers, I mean I guess you want to know what is this blog? why did I make it? and to any of my fellow developers they will more than surely be eager to know what I used to build it as that might help them decide what tools to use for their own (and boy there are a lot!).
 
-## _Why I made this blog?_
+## _Why I made this blog_ 🤔_?_
 
 I am not the kind of person who usually dwells on social media, I wouldn't say that I hate it as whenever I decide to do a quick round-up I find good information related (or unrelated) to my profession as a developer, but I usually also stumble upon other unwanted stuff and in general, it can be time-consuming. I try to follow certain topics on selected social media apps (mostly Reddit and sometimes twitter).
 
@@ -38,4 +39,14 @@ What would you expect from me in this blog are technical posts of stuff I learne
 
 okay so now that we got rid of the boring part (right?) let's get to what most of you I assume are interested in.... drum roll, please! 🥁
 
-## _How I made this blog?_
+## _How I made this blog_ 🧐_?_
+
+The making of a blog (or any other project per say) requires the research and study of all the possible solutions and tools, outweighing the advantages and disadvantages of each approach and solution, and then making a decision that suits the wanted requirements best.
+
+So first of all we need to know what my requirements were for a blog:
+
+1. The development process must be easy and with little to no learning curve
+2. The deployment and maintainence of the blog must be quite easy that it just works™️.
+3. The development and deployment cost must be as little as possible, preferebly zero.
+
+Taking all of that in mind we can now start mentioning the solutions that I came up with and understanding the decisions that I have taken.
